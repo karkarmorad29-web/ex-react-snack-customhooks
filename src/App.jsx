@@ -1,13 +1,13 @@
 //import { useState } from 'react'
-import useDate from "./useDate"
+import useCustomPointer from './useCustomPointer'
 
 function App() {
-  const currentDate = useDate()
+  const customPointer = useCustomPointer('🐉')
 
   return (
     <div>
-      <h1>Data e ora attuale:</h1>
-      <p>{currentDate.toLocaleString()}</p>
+      <h1>Muovi il mouse per mostrare il cursore personale</h1>
+      {customPointer}
     </div>
   );
 }
