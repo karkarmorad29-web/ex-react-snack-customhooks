@@ -1,13 +1,13 @@
 //import { useState } from 'react'
-import useCustomPointer from './useCustomPointer'
+import useKeyPress from './useKeyPress';
 
 function App() {
-  const customPointer = useCustomPointer('🐉')
+  const isEnterPressed = useKeyPress('Enter');
 
   return (
     <div>
-      <h1>Muovi il mouse per mostrare il cursore personale</h1>
-      {customPointer}
+      <h1>Tieni premuto 'Enter' per testare il custom</h1>
+      <p>{isEnterPressed ? 'Enter premuto! ✅' : 'Aspettando input... ⌨️'}</p>
     </div>
   );
 }
